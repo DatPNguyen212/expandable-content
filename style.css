@@ -1,0 +1,16 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+[data-text-container] {
+  --collapse-line-numbers: 5;
+  --line-height: 1.5;
+  height: calc(var(--collapse-line-numbers) * var(--line-height) * 1rem);
+  overflow: hidden;
+}
+
+[data-expand-container].expand [data-text-container] {
+  height: initial;
+}
