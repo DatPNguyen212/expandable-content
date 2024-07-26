@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+article {
+  margin-bottom: 2rem;
+}
+
 [data-text-container] {
   --collapse-line-numbers: 5;
   --line-height: 1.5;
@@ -13,4 +17,12 @@
 
 [data-expand-container].expand [data-text-container] {
   height: initial;
+}
+
+[data-expand-container][data-overflow='false'] [data-text-container] {
+  height: initial;
+}
+
+[data-expand-container][data-overflow='false'] [data-expand-button] {
+  display: none;
 }

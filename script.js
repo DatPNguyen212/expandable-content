@@ -8,6 +8,8 @@ console.log(expandContainersList)
 console.log(textContainersList)
 console.log(expandButtonsList)
 
+checkOverflow()
+
 expandButtonsList.forEach((button) => {
   button.addEventListener('click', expandTextContainer)
 })
@@ -36,5 +38,3 @@ function checkOverflow() {
     }
   })
 }
-
-textContainersList.forEach((textContainer) => {})
