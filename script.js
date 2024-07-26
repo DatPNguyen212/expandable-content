@@ -14,4 +14,27 @@ expandButtonsList.forEach((button) => {
 
 function expandTextContainer(event) {
   event.target.closest('[data-expand-container').classList.toggle('expand')
+  buttonContent = event.target
+    .closest('[data-expand-container]')
+    .classList.contains('expand')
+    ? 'Read less'
+    : 'Read more'
+
+  event.target.textContent = buttonContent
 }
+
+function checkOverflow() {
+  textContainersList.forEach((textContainer) => {
+    if (textContainer.scrollHeight > textContainer.clientHeight) {
+      textContainer
+        .closest('[data-expand-container]')
+        .setAttribute('data-overflow', 'true')
+    } else {
+      textContainer
+        .closest('[data-expand-container]')
+        .setAttribute('data-overflow', 'false')
+    }
+  })
+}
+
+textContainersList.forEach((textContainer) => {})
