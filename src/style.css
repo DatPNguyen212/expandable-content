@@ -11,6 +11,7 @@ article {
 [data-text-container] {
   --collapse-line-numbers: 5;
   --line-height: 1.5;
+  line-height: calc(var(--line-height) * 1rem);
   height: calc(var(--collapse-line-numbers) * var(--line-height) * 1rem);
   overflow: hidden;
   position: relative;
